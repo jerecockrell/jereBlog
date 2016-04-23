@@ -43,7 +43,23 @@ router.route('/:post_id')
 				res.json(post)
 			}
 		})
-	});
+	})
+	.put(function(req, res){
+		Post.findById( req.params.post_id, function(err, post){
+
+			post.title = req.body.title ? req.body.title : post.title;
+			post.content = req.body.content ? req.body.content : post.content;
+			post.img = req.body.img ? req.body.img : post.img;
+
+			post.save(function(err, updatedPost){
+				if(err){
+					console.log("error updating post", err)
+				} else {
+					res.json(updatedPost)
+				}
+			})
+		})
+	})
 
 
 module.exports = router;
