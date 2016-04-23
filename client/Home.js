@@ -20,6 +20,7 @@ var Home = React.createClass({
 				</div>
 					<div className="container">
 						<div className="row">
+						<h2> Skills </h2>
 							<div className="col-sm-6">
 								<div className="card myCard">
 								  <img className="card-img-top profileImg" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAATTAAAAJDFmMTE1YzcyLWZmYjktNDhjNC05OWEwLWMxYjEzNDI5MzgwMQ.jpg" alt="Card image cap" />

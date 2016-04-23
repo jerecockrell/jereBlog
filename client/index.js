@@ -1,13 +1,17 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Home = require('./Home')
+var Home = require('./Home');
+var Navbar = require('./Navbar');
 
 require('./styles.scss');
 
 var App = React.createClass({
 	render: function(){
 		return (
-				<Home />			
+			<div>
+			  <Navbar />			
+				<Home />	
+			</div>		
 		)
 	}
 });
