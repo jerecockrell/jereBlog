@@ -1,17 +1,20 @@
 var React = require('react');
+var AllPostsData = require('./AllPostsData');
+
 /*
 	-BlogApp
-		-AllPosts
-		-ShowPost
+		-AllPostsApp
+			-AllPostsData  --> gets all data and passes it down
+				-PostList --> passes data to PostDisplay component
+				-PostDisplay 		--> (stateless) pure render function
+		-OnePost
 		-NewPost
 */
 
 var AllPostsApp = React.createClass({
 	render: function(){
 		return (
-			<div>
-			 <h1>This shows all blog posts</h1>
-			</div>
+			<AllPostsData />
 		)
 	}
 });
