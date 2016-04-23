@@ -1,7 +1,11 @@
 
 var express = require('express');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
 var path = require('path');
+var Post = require('./models/post');
+var PostRouter = require('./routes/post');
+
 
 var app = express();
 
@@ -11,6 +15,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/', function(req, res){
 	res.sendFile(path.join(__dirname, 'index.html'));
 });
+
+app.use('/api/posts', PostRouter);
 
 var port = process.env.PORT || 3000;
 var hostname = process.env.HOSTNAME || "localhost";
