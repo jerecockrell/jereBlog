@@ -9,6 +9,8 @@ var AllPostsData = require('./AllPostsData');
 				-PostDisplay 		--> (stateless) pure render function
 		-OnePost
 		-NewPost
+			-- PostFormData
+			  -- PostFormDisplay
 */
 
 var AllPostsApp = React.createClass({

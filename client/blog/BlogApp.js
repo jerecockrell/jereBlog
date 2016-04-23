@@ -2,12 +2,19 @@ var React = require('react');
 var AllPostsApp = require('./AllPostsApp');
 var NewPost = require('./NewPost');
 var OnePost = require('./OnePost');
+
 /*
 	-BlogApp
 		-AllPostsApp
-		-ShowPost
+			-AllPostsData  --> gets all data and passes it down
+				-PostList --> passes data to PostDisplay component
+				-PostDisplay 		--> (stateless) pure render function
+		-OnePost
 		-NewPost
+			-- PostFormData
+			  -- PostFormDisplay
 */
+
 
 var BlogApp = React.createClass({
 	getInitialState: function(){
