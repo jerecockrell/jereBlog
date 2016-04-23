@@ -12,6 +12,8 @@ router.route('/')
 				res.json(posts)
 			}
 		})
+
+
 	})
 	.post(function(req, res){
 		console.log('About to post')
@@ -32,6 +34,16 @@ router.route('/')
 
 	});
 
+router.route('/:post_id')
+	.get(function(req, res){
+		Post.findById( req.params.post_id, function(err, post){
+			if(err){
+				console.log(err)
+			} else {
+				res.json(post)
+			}
+		})
+	});
 
 
 module.exports = router;
