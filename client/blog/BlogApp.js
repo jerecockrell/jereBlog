@@ -24,9 +24,14 @@ var BlogApp = React.createClass({
 			return <OnePost />
 		}
 	},
+	toggleBlogComp: function(compName){
+		this.setState({ activeBlogComp: compName })
+	},
 	render: function(){
 		return (
 			<div>
+			<button className="btn btn-primary" onClick={this.toggleBlogComp.bind(null, 'NewPost')}> New Post </button>
+			<button className="btn btn-primary" onClick={this.toggleBlogComp.bind(null, 'AllPostsApp')}> All Posts </button>
 			 { this.showBlogComp() }
 			</div>
 		)
