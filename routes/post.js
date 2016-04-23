@@ -5,7 +5,13 @@ var Post = require('../models/post');
 
 router.route('/')
 	.get(function(req, res){
-		res.json({message: "Post router working"})
+		Post.find(function(err, posts){
+			if(err){
+				console.log("err finding posts", err);
+			} else {
+				res.json(posts)
+			}
+		})
 	})
 	.post(function(req, res){
 		console.log('About to post')
