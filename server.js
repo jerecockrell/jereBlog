@@ -1,11 +1,13 @@
 
 var express = require('express');
 var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
 var path = require('path');
+
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/jereblog');
+
 var Post = require('./models/post');
 var PostRouter = require('./routes/post');
-
 
 var app = express();
 
