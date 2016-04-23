@@ -3,8 +3,12 @@ var React = require('react');
 var PostDisplay = function(props){
 	console.log(props);
 	return (
-		<div>
-			<h4> found display for one post </h4>
+		<div className="card col-sm-3">
+      <img className="card-img-top" src={props.img} alt="Card image cap" />
+      <div className="card-block">
+      	<h4 className="card-title">{props.title}</h4>
+    		<a href="#" className="btn btn-primary">Show</a>
+  	</div>
 		</div>
 	)
 };
