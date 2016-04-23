@@ -8,12 +8,26 @@ var Contact = require('./Contact');
 require('./styles.scss');
 
 var App = React.createClass({
+	getInitialState: function(){
+		return {
+			activeParentComp: 'Home'
+		}
+	},
+	showComp: function(){
+		if(this.state.activeParentComp === 'Home'){
+			return <Home />
+		} else if (this.state.activeParentComp === 'Contact'){
+			return <Contact />
+	  }
+	},
+	toggleMainComp: function(compName){
+		this.setState({ activeParentComp: compName })
+	},
 	render: function(){
 		return (
 			<div>
-			  <Navbar />			
-					<Home />
-					<Contact />
+			  <Navbar toggleMainComp={ this.toggleMainComp }/>			
+					{ this.showComp() }
 				<Footer />	
 			</div>		
 		)

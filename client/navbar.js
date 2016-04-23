@@ -1,20 +1,22 @@
 var React = require('react');
 
+var links = ['Home', 'Blog', 'Contact'];
+
 var Navbar = React.createClass({
 	render: function(){
+		var self = this;
+		var clinks = links.map(function(item){
+			return (
+				<li className="nav-item">
+			      <a className="nav-link" onClick={ self.props.toggleMainComp.bind(null, item) }>{ item }</a>
+			  </li>
+			)
+		});
 		return (
 			<nav className="navbar navbar-light bg-faded">
 			  <a className="navbar-brand" href="#">Navbar</a>
 			  <ul className="nav navbar-nav">
-			    <li className="nav-item active">
-			      <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
-			    </li>
-			    <li className="nav-item">
-			      <a className="nav-link" href="#">Blog</a>
-			    </li>
-			    <li className="nav-item">
-			      <a className="nav-link" href="#">Contact</a>
-			    </li>
+			    { clinks }
 			  </ul>
       </nav>
     )
