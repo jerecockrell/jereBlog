@@ -21,10 +21,10 @@ var Home = React.createClass({
 					<div className="container">
 						<div className="row">
 							<div className="col-sm-6">
-								<div class="card">
-								  <img class="card-img-top" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAATTAAAAJDFmMTE1YzcyLWZmYjktNDhjNC05OWEwLWMxYjEzNDI5MzgwMQ.jpg" alt="Card image cap" />
-								  <div class="card-block">
-								    <h4 class="card-title">Jr Full Stack Dev</h4>								    
+								<div className="card myCard">
+								  <img className="card-img-top profileImg" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAATTAAAAJDFmMTE1YzcyLWZmYjktNDhjNC05OWEwLWMxYjEzNDI5MzgwMQ.jpg" alt="Card image cap" />
+								  <div className="card-block">
+								    <h4 className="card-title">Jr Full Stack Dev</h4>								    
 								  </div>
 								</div>
 							</div>
