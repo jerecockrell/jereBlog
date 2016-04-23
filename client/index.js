@@ -4,6 +4,7 @@ var Home = require('./Home');
 var Navbar = require('./Navbar');
 var Footer = require('./Footer');
 var Contact = require('./Contact');
+var BlogApp = require('./blog/BlogApp');
 
 require('./styles.scss');
 
@@ -18,6 +19,8 @@ var App = React.createClass({
 			return <Home />
 		} else if (this.state.activeParentComp === 'Contact'){
 			return <Contact />
+	  } else if (this.state.activeParentComp === 'Blog'){
+	  	return <BlogApp />
 	  }
 	},
 	toggleMainComp: function(compName){
