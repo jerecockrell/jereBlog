@@ -26,7 +26,7 @@ var BlogApp = React.createClass({
 		if(this.state.activeBlogComp === 'AllPostsApp'){
 			return <AllPostsApp />
 		} else if(this.state.activeBlogComp === 'NewPost') {
-			return <NewPost />
+			return <NewPost toggleBlogComp={ this.toggleBlogComp }/>
 		} else if(this.state.activeBlogComp === 'OnePost') {
 			return <OnePost />
 		}
