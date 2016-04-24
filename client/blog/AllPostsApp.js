@@ -16,7 +16,7 @@ var AllPostsData = require('./AllPostsData');
 var AllPostsApp = React.createClass({
 	render: function(){
 		return (
-			<AllPostsData />
+			<AllPostsData toggleBlogComp={ this.props.toggleBlogComp } />
 		)
 	}
 });

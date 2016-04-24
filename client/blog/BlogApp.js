@@ -24,15 +24,20 @@ var BlogApp = React.createClass({
 	},
 	showBlogComp: function(){
 		if(this.state.activeBlogComp === 'AllPostsApp'){
-			return <AllPostsApp />
+			return <AllPostsApp toggleBlogComp={ this.toggleBlogComp } />
 		} else if(this.state.activeBlogComp === 'NewPost') {
 			return <NewPost toggleBlogComp={ this.toggleBlogComp }/>
 		} else if(this.state.activeBlogComp === 'OnePost') {
-			return <OnePost />
+			return this.state.activeBlogId ? <OnePost id={ this.state.activeBlogId } /> : null;
 		}
 	},
-	toggleBlogComp: function(compName){
+	toggleBlogComp: function(compName, id){
+		if(id){
+			console.log("setting activeBlogId", id)
+			this.setState({ activeBlogComp: compName, activeBlogId: id })
+		} else {
 		this.setState({ activeBlogComp: compName })
+		}
 	},
 	render: function(){
 		return (

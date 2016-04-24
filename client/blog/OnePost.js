@@ -1,5 +1,5 @@
 var React = require('react');
-
+var OnePostData = require('./OnePostData');
 /*
 	-BlogApp
 		-AllPosts
@@ -9,11 +9,7 @@ var React = require('react');
 
 var OnePost = React.createClass({
 	render: function(){
-		return (
-			<div>
-			 <h1>This shows one blog post</h1>
-			</div>
-		)
+		return <OnePostData id={this.props.id} />
 	}
 });
 

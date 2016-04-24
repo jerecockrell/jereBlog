@@ -7,7 +7,7 @@ var PostDisplay = function(props){
       <img className="card-img-top" src={props.img} alt="Card image cap" />
       <div className="card-block">
       	<h4 className="card-title">{props.title}</h4>
-    		<a href="#" className="btn btn-primary">Show</a>
+    		<a onClick={props.toggleBlogComp.bind(null, "OnePost", props.id)} className="btn btn-primary">Show</a>
   	</div>
 		</div>
 	)
